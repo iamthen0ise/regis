@@ -1,5 +1,7 @@
 import unittest
-from regis import Registry, RegistryMixin
+
+from regis import Registry, RegistryMixin, PermissionError
+
 
 class TestRegistry(unittest.TestCase):
 
@@ -8,7 +10,7 @@ class TestRegistry(unittest.TestCase):
         class ExampleClass(RegistryMixin):
             pass
         example_instance = ExampleClass()
-        example_instance.register_registry()
+        example_instance.register()
         self.assertIn(ExampleClass, registry._registered_classes)
         
     def test_unregister_class(self):
@@ -16,8 +18,8 @@ class TestRegistry(unittest.TestCase):
         class ExampleClass(RegistryMixin):
             pass
         example_instance = ExampleClass()
-        example_instance.register_registry()
-        example_instance.unregister_registry()
+        example_instance.register()
+        example_instance.unregister()
         self.assertNotIn(ExampleClass, registry._registered_classes)
         
     def test_set_item(self):
@@ -25,21 +27,19 @@ class TestRegistry(unittest.TestCase):
         class ExampleClass(RegistryMixin):
             pass
         example_instance = ExampleClass()
-        example_instance.register_registry()
+        example_instance.register()
         example_instance.set_item('key', 'value')
         self.assertEqual(registry._items['key'], 'value')
         
     def test_get_item(self):
-        registry = Registry()
         class ExampleClass(RegistryMixin):
             pass
         example_instance = ExampleClass()
-        example_instance.register_registry()
+        example_instance.register()
         example_instance.set_item('key', 'value')
         self.assertEqual(example_instance.get_item('key'), 'value')
         
     def test_permission_error(self):
-        registry = Registry()
         class ExampleClass(RegistryMixin):
             pass
         example_instance = ExampleClass()
