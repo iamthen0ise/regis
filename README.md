@@ -4,8 +4,8 @@ Regis is a compact yet powerful Python library designed to manage Singleton Regi
 
 Aimed at offering a blend of simplicity and robustness, Regis allows seamless registration and deregistration of classes while ensuring thread-safety, making it an ideal choice for applications where concurrent access to resources is prevalent.
 
-[![GitHub license](https://img.shields.io/github/license/your-username/your-repo-name)](https://github.com/your-username/your-repo-name/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/your-username/your-repo-name)](https://github.com/your-username/your-repo-name/issues)
+[![GitHub license](https://img.shields.io/github/license/iamthen0ise/regis)](https://github.com/iamthen0ise/regis/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/iamthen0ise/regis)](https://github.com/iamthen0ise/regis/issues)
 
 ## Table of Contents
 
