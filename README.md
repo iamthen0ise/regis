@@ -1,4 +1,4 @@
-# Project Title
+# Regis
 
 Regis is a compact yet powerful Python library designed to manage Singleton Registries with added permission checks.
 
